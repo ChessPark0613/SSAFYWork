@@ -44,22 +44,3 @@ for test_case in range(1, T + 1):
             break
 
     print(f"#{test_case} {stop_count}")
-# T = int(input())
-#
-# for t in range(1, T+1):
-#     K, N, M = map(int, input().split()) # K : 한번충전으로 이동가능 정류장수
-#     charge_stations = list(map(int,input().split()))# N: 종점 # M : 충전기가 설치된 정류장 수
-#
-#     pos = 0 # 현재 버스의 위치
-#     cnt = 0 # 충전을 한 횟수
-#     while pos + K < N:
-#         for step in range(K, 0, -1): #최소 충전을 해야함으로 간격을 좁혀나간다
-#             if (pos + step) in charge_stations:
-#                 pos += step
-#                 cnt += 1
-#                 break  # 충전소 도달 다시 while문으로 가고 충전횟수+1
-#         else:
-#             cnt = 0  # 종점에 도착 할 수 없을 때
-#             break
-#
-#     print(f"#{t} {cnt}")
