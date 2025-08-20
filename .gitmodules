@@ -1,3 +1,7 @@
 [submodule "live"]
 	path = live
 	url = https://lab.ssafy.com/s14/python/python.git
+
+[submodule "aps_basic"]
+	path = aps_basic
+	url = https://lab.ssafy.com/s14/python/aps_basic.git
