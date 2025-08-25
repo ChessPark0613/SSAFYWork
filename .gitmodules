@@ -1,0 +1,12 @@
+[submodule "live"]
+	path = live
+	url = https://lab.ssafy.com/s14/python/python.git
+	branch = master
+[submodule "aps_basic"]
+	path = aps_basic
+	url = https://lab.ssafy.com/s14/python/aps_basic.git
+	branch = master
+[submodule "web"]
+	path = web
+	url = https://lab.ssafy.com/s14/python/web.git
+	branch = master
