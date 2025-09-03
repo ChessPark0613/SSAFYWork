@@ -10,3 +10,6 @@
 	path = web
 	url = https://lab.ssafy.com/s14/python/web.git
 	branch = master
+[submodule "advanced"]
+	path = advanced
+	url = https://lab.ssafy.com/s14/python/sw-advanced.git
