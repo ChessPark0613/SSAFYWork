@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>주목할 만한 신간 도서 목록</h1>
+  <div class="books bestseller">
+    {% for item in result %}
+    <div class="book_item">
+      <p class="book_title">제목 : {{ item.title }}</p>
+      <p class="book_author">저자: {{ item.author }}</p>
+    </div>
+    <hr>
+  {% endfor %}
+  </div>
+{% endblock content %}
+

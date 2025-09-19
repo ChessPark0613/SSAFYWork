@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>할 일 상세 페이지</h1>
+  <p>{{ work }} 상세 내용</p>
+  <a href="{% url 'todos:index' %}">뒤로가기</a>
+{% endblock content %}

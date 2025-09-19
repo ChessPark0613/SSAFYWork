@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도서 관리 시스템</title>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav">
+    <a href="{% url 'libraries:index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home</a>
+    <a href="{% url 'libraries:recommend' %}" class="{% if request.resolver_match.url_name == 'recommend' %}active{% endif %}">Recommend</a>
+    <a href="{% url 'libraries:bestseller' %}" class="{% if request.resolver_match.url_name == 'bestseller' %}active{% endif %}">BestSeller</a>
+  </div>
+</nav>
+<main>
+  {% block content %}
+  {% endblock content %}
+</main>
+</body>
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+  }
+
+  .navbar {
+    background: #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 8px 12px;
+  }
+  .nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .nav a {
+    display: inline-block;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #374151;
+    border-radius: 8px;
+    transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  .nav a:hover {
+    background: #e5e7eb;
+  }
+
+  .nav a.active,
+  .nav a[aria-current="page"] {
+    background: #22c55e;
+    color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05) inset;
+  }
+
+  main {
+    width: 100vw;
+    padding: 2rem;
+  }
+
+  .bg_yellow {
+    background-color: #fdbf08;
+  }
+
+  .bg_blue { 
+    background-color: #16a1b6;
+  }
+
+  .bg_red { 
+    background-color: #fddfdf;
+  }
+
+  .bg_puple { 
+    background-color: #e0dffe;
+  }
+
+  .bg_gree { 
+    background-color: #e1fee0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .title {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .book_title {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .book_author {
+    color: gray;
+    font-size: 18px;
+  }
+</style>
+</html>

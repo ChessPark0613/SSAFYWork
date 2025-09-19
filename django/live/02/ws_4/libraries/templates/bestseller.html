@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>베스트 셀러 목록</h1>
+  <div class="books">
+    {% for item in result %}
+    <div class="book_item
+      {% if forloop.counter == 1 %}bg_red
+      {% elif forloop.counter == 2 %}bg_puple
+      {% elif forloop.counter == 3 %}bg_gree
+      {% endif %}">
+      <p class="book_title">제목 : {{ item.title }}</p>
+      <p class="book_author">저자: {{ item.author }}</p>
+      <p class="book_description">설명: {{ item.description }}</p>
+    </div>
+    <hr>
+  {% endfor %}
+  </div>
+{% endblock content %}
+
