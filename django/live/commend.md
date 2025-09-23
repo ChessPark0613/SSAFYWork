@@ -87,3 +87,19 @@ python manage.py runserver
 ```
 
 개발용 서버가 실행되고, 브라우저에서 [http://127.0.0.1:8000/](http://127.0.0.1:8000/) 접속 가능
+
+
+## 7. Table 생성
+```bash
+1. project 생성
+2. app 생성
+3. settings.py에 앱등록
+---
+4. App > models.py에 class 작성
+5. 마이그레이션 파일 생성
+> $python manage.py makemigrations
+6. DB 반영
+> $python manage.py migrate
+---
+7. 결과확인
+```
